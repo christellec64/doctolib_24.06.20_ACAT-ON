@@ -2,9 +2,11 @@ import React from "react";
 
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import BarChart from "./BarChart";
+import LineGraph from "./LineGraph";
 
 import styles from "./Stat.module.css";
-import { Row, Col, FormGroup, Label, Input } from "reactstrap";
+import { Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
 
 function stat() {
   const jour = new Date().getDate();
@@ -12,47 +14,78 @@ function stat() {
   const year = new Date().getFullYear();
   return (
     <>
-      <Navbar title="My stats"/>
+      <Navbar title="My stats" />
       <h5 className={`${styles.h5} mt-2`}>Blood glucose statement</h5>
-      <h6 className={styles.h6}>
-        Date : {jour}/0{month + 1}/{year}
+      <h6 xs="4" className={styles.h6}>
+        Date {jour}/{month + 1}/{year}
       </h6>
-      <Row className="mr-3 ml-3">
-        <Col>
+      <Row className={`${styles.rowInput} ml-2 mb-3 mt-3 mr-1`}>
+        <Col xs="3" className="pl-1 pr-1">
           <FormGroup>
-            <Label for="morning" />
-            <Input
-              type="text"
-              name="morning"
-              id="morning"
-              placeholder="Morning"
-            />
+            <Label for="morning">
+              <Input
+                className={styles.input}
+                type="text"
+                name="morning"
+                id="morning"
+                placeholder="Morning..."
+              />
+            </Label>
           </FormGroup>
         </Col>
-        <Col>
+        <Col xs="2" className="pl-1 pr-1">
           <FormGroup>
-            <Label for="Noon" />
-            <Input type="text" name="Noon" id="Noon" placeholder="Noon" />
+            <Label for="Noon">
+              <Input
+                className={styles.input}
+                type="text"
+                name="Noon"
+                id="Noon"
+                placeholder="Noon..."
+              />
+            </Label>
           </FormGroup>
         </Col>
-        <Col>
+        <Col xs="3" className="pl-1 pr-1">
           <FormGroup>
-            <Label for="Evening" />
-            <Input
-              type="text"
-              name="Evening"
-              id="Evening"
-              placeholder="Evening"
-            />
+            <Label for="Evening">
+              <Input
+                className={styles.input}
+                type="text"
+                name="Evening"
+                id="Evening"
+                placeholder="Evening..."
+              />
+            </Label>
           </FormGroup>
+        </Col>
+        <Col xs="3">
+          <Button className={styles.button}>Save</Button>
         </Col>
       </Row>
-      <h5 className={styles.h5}>Height / weight</h5>
-      <h6>Date (week) :</h6>
-      <FormGroup className="mr-4 ml-4">
-        <Label for="weight" />
-        <Input type="number" name="weight" id="weight" placeholder="KG" />
-      </FormGroup>
+      <BarChart />
+      <h5 className={styles.h5}>Weight</h5>
+      <Row className={`${styles.rowInput} ml-1 mb-3 mt-3 mr-1`}>
+        <Col className={styles.h6} xs="4">Once a month</Col>
+        <Col xs="5">
+          <FormGroup className="ml-2">
+            <Label for="weight">
+              <Input
+                className={styles.input}
+                type="number"
+                name="weight"
+                id="weight"
+                placeholder="KG"
+              />
+            </Label>
+          </FormGroup>
+        </Col>
+        <Col xs="3">
+          <Button className={styles.button}>Save</Button>
+        </Col>
+      </Row>
+      <LineGraph />
+
       <Footer />
     </>
   );
