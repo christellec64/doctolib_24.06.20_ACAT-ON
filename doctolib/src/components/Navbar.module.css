@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
 .navbar {
   background-color: white;
   color: #F3724A;
@@ -22,4 +21,12 @@
 .logo{
   width: 2rem;
   margin-right: 0.4rem;
+}
+.medime {
+  font-size: 0.7rem;
+}
+
+.title {
+  color: #004163;
+  font-weight: bold;
 }
