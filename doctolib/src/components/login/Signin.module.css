@@ -1,18 +1,19 @@
 .background {
     background-image: url("../img/women.png");
     background-repeat: no-repeat;
-    background-position: left;
-    height: 80%;
+    background-position: left bottom;
+    width: 80%;
+    display: flex;
 }
 
-/* .form {
+.form {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    align-content: center;
     padding-top: 20%;
-} */
+}
 
 .inputs {
     justify-content: center;
@@ -20,6 +21,15 @@
 }
 
 .button {
-    margin-top: 10%;
+    margin-top: 500%;
     margin-bottom: 30%;
+}
+
+.button2 {
+    margin-bottom: 180%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
 }
