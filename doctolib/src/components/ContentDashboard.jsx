@@ -1,6 +1,7 @@
 import React from 'react';
 
 import clock from '../img/clock.png';
+import bulb from '../img/bulb.png';
 
 import styles from './ContentDashboard.module.css';
 import { Container, Row, Col } from 'reactstrap';
@@ -23,6 +24,11 @@ function ContentDashboard() {
         <ListGroupItem color="info" className="justify-content-between">PENICILLIN <Badge pill color="dark">16:30</Badge></ListGroupItem>
         <ListGroupItem color="info" className="justify-content-between">DOLIPRANE <Badge pill color="dark">19:00</Badge></ListGroupItem>
       </ListGroup>
+
+      <Row className={styles.advice}>
+        <Col xs='2'><img src={bulb} alt='light' className={styles.bulbImage}/></Col>
+        <Col xs='10' className={styles.adviceText}>Eat 5 fruits and 5 vegetables per day !</Col>
+      </Row>
 
       <Row className={styles.quote}>
         <Col>“ You don’t need to be the “best”.

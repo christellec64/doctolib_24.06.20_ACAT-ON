@@ -31,5 +31,18 @@
   margin-top: 1rem;
   font-family: 'Lato';
   text-align: center;
+}
 
+.advice {
+  margin-top: 1rem;
+  font-family: 'Lato';
+}
+
+.adviceText {
+  align-self: center;
+}
+
+
+.bulbImage {
+  width: 3rem;
 }
