@@ -3,12 +3,16 @@ import Navbar from './Navbar';
 import ContentDashboard from './ContentDashboard';
 import Footer from './Footer';
 
+import styles from './Dashboard.module.css';
+
 
 function Dashboard() {
   return (
-    <div>
+    <div className={styles.containerDashboard}>
+      <div className={styles.content}>
       <Navbar />
       <ContentDashboard />
+      </div>
       <Footer />
     </div>
   );

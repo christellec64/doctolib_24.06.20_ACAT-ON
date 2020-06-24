@@ -19,14 +19,14 @@ function ContentDashboard() {
       </Row>
 
       <ListGroup className={styles.listPills}>
-        <ListGroupItem color="info" className="justify-content-between">DOLIPRANE <Badge pill color="light">12:30</Badge></ListGroupItem>
-        <ListGroupItem color="info" className="justify-content-between">PENICILLIN <Badge pill>16:30</Badge></ListGroupItem>
-        <ListGroupItem color="info" className="justify-content-between">DOLIPRANE <Badge pill>19:00</Badge></ListGroupItem>
+        <ListGroupItem color="info" className="justify-content-between">DOLIPRANE <Badge pill color="dark">12:30</Badge></ListGroupItem>
+        <ListGroupItem color="info" className="justify-content-between">PENICILLIN <Badge pill color="dark">16:30</Badge></ListGroupItem>
+        <ListGroupItem color="info" className="justify-content-between">DOLIPRANE <Badge pill color="dark">19:00</Badge></ListGroupItem>
       </ListGroup>
 
       <Row className={styles.quote}>
-        <Col> <span className={styles.dot}>“</span> You don’t need to be the “best”.
-         No one needs to eat the best apple every day. You just need a good one. And you’re a good apple <span className={styles.dot}>“</span></Col>
+        <Col>“ You don’t need to be the “best”.
+         No one needs to eat the best apple every day. You just need a good one. And you’re a good apple “</Col>
       </Row>
 
       <ListGroup horizontal className={styles.score}>
