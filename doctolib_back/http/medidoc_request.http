@@ -1,0 +1,28 @@
+### GET all medidocs
+GET http://localhost:8000/patients/1/medidocs
+
+### GET one medidoc
+GET http://localhost:8000/patients/1/medidocs/7
+
+### POST one medidoc
+POST http://localhost:8000/patients/1/medidocs
+Content-Type: application/json
+
+{
+    "title": "My medical prescription",
+    "url": "https://www.ameli.fr/sites/default/files/formualires/204/s3326.pdf",
+    "id_patient" : "1"
+}
+
+### PUT one medidoc
+PUT http://localhost:8000/patients/1/medidocs/7
+Content-Type: application/json
+
+{
+    "title": "My medical prescription_ 2021",
+    "url": "https://www.ameli.fr/sites/default/files/formualires/204/s3326.pdf",
+    "id_patient" : "1"
+}
+
+### DELETE one patient
+DELETE  http://localhost:8000/patients/1/medidocs/7

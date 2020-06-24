@@ -1,0 +1,40 @@
+### GET all patients
+GET http://localhost:8000/patients
+
+### GET one patients
+GET http://localhost:8000/patients/2
+
+### POST one patient
+POST http://localhost:8000/patients
+Content-Type: application/json
+
+{
+    "lastname" :"jean",
+    "firstname" : "toto",
+    "password" : "blabla",
+    "height" : "1.80m",
+    "weight" : "65",
+    "doctor" : "dr House",    
+    "doctor_mail" : "drhouse@gmail.com",
+    "disease" :"diabet",
+    "email" : "toto.jean@gmail.com"
+}
+
+### PUT one patient
+PUT http://localhost:8000/patients/1
+Content-Type: application/json
+
+{
+    "lastname" :"mike",
+    "firstname" : "toto",
+    "password" : "blabla",
+    "height" : "1.80m",
+    "weight" : "65",
+    "doctor" : "dr House",    
+    "doctor_mail" : "drhouse@gmail.com",
+    "disease" :"diabet",
+    "email" : "toto.jean@gmail.com"
+}
+
+### DELETE one patient
+DELETE  http://localhost:8000/patients/1
