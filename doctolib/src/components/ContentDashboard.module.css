@@ -1,0 +1,33 @@
+.banner{
+  margin-top: 1rem;
+
+}
+
+.blueBanner {
+  background-color: #004163;
+  padding: 0.25rem;
+}
+
+.clock {
+  width: 2rem;
+}
+
+.textBanner {
+  color: white;
+}
+
+.listPills {
+  margin-top: 1rem;
+}
+
+.score {
+  margin-top: 1rem;
+}
+
+.quote {
+  margin-top: 1rem;
+}
+
+.dot {
+  font-size: 2rem;
+}
