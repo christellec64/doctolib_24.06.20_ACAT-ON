@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.containerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #004163;
+}
+
+.logo {
+  height: 20%;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Lato'
+}
