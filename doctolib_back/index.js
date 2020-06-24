@@ -8,12 +8,16 @@ const cors = require("cors");
 const patients = require("./routes/patients.route");
 const tips = require("./routes/daily_tips.route");
 const positiveIdea = require("./routes/positive_idea.route");
+const weight = require("./routes/weight.route");
+const glucose = require("./routes/glucose.route");
 
 app.use(cors());
 app.use(express.json());
 app.use("/patients", patients);
 app.use("/tips", tips);
 app.use("/ideas", positiveIdea);
+app.use("/weight", weight);
+app.use("/glucose", glucose);
 
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to MediMe API !");
