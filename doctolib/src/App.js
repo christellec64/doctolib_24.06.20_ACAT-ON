@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
+import Stat from './components/stats/Stat.jsx';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         <Route exact path='/information' />
         <Route exact path='/treatment' />
         <Route exact path='/pilllist' />
-        <Route exact path='/stat' />
+        <Route exact path='/stat' component={Stat} />
         <Route exact path='/ordonance' />
         <Route exact path='/dashboard' component={Dashboard} />
       </Switch>
