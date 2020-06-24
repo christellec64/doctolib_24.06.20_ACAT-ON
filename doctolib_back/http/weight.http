@@ -1,0 +1,21 @@
+### GET all medidocs
+GET http://localhost:8000/weight
+
+### POST one medidoc
+POST http://localhost:8000/weight
+Content-Type: application/json
+
+{
+    "weight": "50"
+}
+
+### PUT one medidoc
+PUT http://localhost:8000/weight/1
+Content-Type: application/json
+
+{
+    "weight": "70"
+}
+
+### DELETE one patient
+DELETE  http://localhost:8000/weight/1
