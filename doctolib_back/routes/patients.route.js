@@ -56,7 +56,7 @@ patient.put("/:patientId", (req, res) => {
   );
 });
 
-patient.delete("/patientId", (req, res) => {
+patient.delete("/:patientId", (req, res) => {
   const patientId = req.params.patientId;
   connection.query("DELETE FROM patient WHERE id = ?", [patientId], (err) => {
     if (err) {
