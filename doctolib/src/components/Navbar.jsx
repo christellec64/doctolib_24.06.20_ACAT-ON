@@ -8,6 +8,7 @@ import user from "./img/user.png";
 import logout from "./img/logout.png";
 
 import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function Navbar({ title }) {
   return (
@@ -17,19 +18,31 @@ function Navbar({ title }) {
           <Col xs="2">
             <Row>
               <Col>
-                <img src={logo} alt="logo app" className={styles.logo} />
+                <Link to="/dashboard">
+                  <img src={logo} alt="logo app" className={styles.logo} />
+                </Link>
               </Col>
             </Row>
             <Row>
-              <Col className={styles.medime}>MediMe</Col>
+              <Link to="/dashboard">
+                <Col className={styles.medime}>MediMe</Col>
+              </Link>
             </Row>
           </Col>
+<<<<<<< HEAD
           <Col xs={{ size: 5, offset: 0 }} className={styles.title}>{title}</Col>
+=======
+          <Col xs={{ size: 5, offset: 0.5 }} className={styles.title}>
+            {title}
+          </Col>
+>>>>>>> d5ef7a9fbf1361bae9e19bfc1bad27d07b67533b
           <Col xs="1.5">
             <img src={bell} alt="notification" className={styles.item} />
           </Col>
           <Col xs="2">
-            <img src={user} alt="user" className={styles.item} />
+            <Link to="/information">
+              <img src={user} alt="user" className={styles.item} />
+            </Link>
           </Col>
           <Col xs="1.5">
             <img src={logout} alt="log out" className={styles.item} />
