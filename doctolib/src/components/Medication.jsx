@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import styles from "./Medication.module.css";
 import alarm from "../img/clock.png";
 import { Link } from "react-router-dom";
+import alarm from "../img/alarm.png";
 
 function Medication() {
   const [collapseA, setCollapseA] = useState(false);

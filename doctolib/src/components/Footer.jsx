@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import home from './img/home.png';
 import graph from './img/graph.png';
@@ -15,10 +16,10 @@ function Footer() {
     <>
       <Container className={styles.footer}>
         <Row className={styles.listItem}>
-          <Col xs='3'><img src={home} alt='Home' className={styles.item} /></Col>
-          <Col xs='3'><img src={graph} alt='Stats' className={styles.item} /></Col>
-          <Col xs='3'><img src={pills} alt='Pills' className={styles.item} /></Col>
-          <Col xs='3'><img src={note} alt='Note' className={styles.item} /></Col>
+        <Col xs='3'><Link to="/dashboard"><img src={home} alt='Home' className={styles.item} /></Link></Col>
+          <Col xs='3'><Link to="/stat"><img src={graph} alt='Stats' className={styles.item} /></Link></Col>
+          <Col xs='3'><Link to="/pilllist"><img src={pills} alt='Pills' className={styles.item} /></Link></Col>
+          <Col xs='3'><Link to="/ordonance"><img src={note} alt='Note' className={styles.item} /></Link></Col>
         </Row>
       </Container>
     </>
