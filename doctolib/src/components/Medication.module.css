@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .nextMeditationContainer {
   margin-top: 2vw;
@@ -33,7 +33,13 @@
 .buttonMedication {
   background-color: #f3724a !important;
   border: none !important;
-  height:3.5vh;
+  height: 3.5vh;
   font-size: 0.6rem !important;
   margin-right: 0.5vw;
+}
+.treatmentMedication {
+  font-size: 0.7rem;
+  text-align: right;
+  padding-left: 2vw;
+  cursor: pointer;
 }
