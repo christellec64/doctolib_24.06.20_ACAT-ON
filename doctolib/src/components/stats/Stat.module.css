@@ -1,0 +1,34 @@
+.h5 {
+  padding: 2vw 0 2vw 5vw;
+  background-color: #004163;
+  color: white;
+  font-size: 4vw;
+}
+.h6 {
+  font-size: 3.5vw;
+  align-self : top;
+  padding-left : 5vw;
+}
+.input {
+  font-size: 0.7rem !important;
+  height: 7vw !important;
+}
+
+.rowInput {
+  height: 5vw !important;
+  
+}
+
+.bar {
+  height: 25vw !important;
+}
+.bar2 {
+  height: 100%;
+}
+.button {
+    height : 7vw;
+    font-size: 0.8rem !important;
+    background-color:  #f3724a !important;
+    border : 1px solid  #f3724a !important;
+    padding : 1vw 2vw !important
+}

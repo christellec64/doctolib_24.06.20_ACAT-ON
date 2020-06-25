@@ -2,12 +2,11 @@
 
 .navbar {
   background-color: white;
-  color: #F3724A;
-  font-family: 'Lato';
+  color: #f3724a;
+  font-family: "Lato";
   font-size: 1.2rem;
   width: 100vw;
-  margin-top: 1rem;  
-
+  margin-top: 1rem;
 }
 
 .listItem {
@@ -18,7 +17,7 @@
   width: 2rem;
 }
 
-.logo{
+.logo {
   width: 2rem;
   margin-right: 0.4rem;
 }
