@@ -26,6 +26,7 @@
 .heading {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .formContainer {
@@ -54,9 +55,23 @@
     border-bottom: 1px solid rgb(185, 185, 185) !important;
 }
 
+.inputtime {
+    margin-top: 2vh;
+}
+
+.inputfrequency {
+    margin-top: 2vh;
+    width: 40vw;
+    border: 1px solid rgb(194, 194, 194) !important;
+    border-radius: 3px;
+}
 .timelabel {
     margin-top: 3vh;
     margin-bottom: -7vh;
+    color: rgb(107, 107, 107);
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
 }
 
 input[type="time"] {
@@ -64,7 +79,7 @@ input[type="time"] {
     color: #2a2c2d;
     font-size: 14px;
     font-family: helvetica;
-    width: 180px;
+    width: 55vw;
 }
 
 input[type="time"]::-webkit-datetime-edit-fields-wrapper {
@@ -82,7 +97,9 @@ input[type="time"]::-webkit-datetime-edit-hour-field {
     background-color: #f2f4f5;
     border-radius: 15%;
     padding: 19px 13px;
-    width: 7vw;
+    width: 17vw;
+    display: flex;
+    justify-content: center;
 }
 
 /* Minute */
@@ -90,7 +107,9 @@ input[type="time"]::-webkit-datetime-edit-minute-field {
     background-color: #f2f4f5;
     border-radius: 15%;
     padding: 19px 13px;
-    width: 7vw;
+    width: 17vw;
+    display: flex;
+    justify-content: center;
 }
 
 /* AM/PM */
@@ -107,9 +126,9 @@ input[type="time"]::-webkit-clear-button {
 }
 
 /* Up/Down arrows for incrementing/decrementing the value */
-input[type="time"]::-webkit-inner-spin-button {
+/* input[type="time"]::-webkit-inner-spin-button {
     display: none;
-}
+} */
 
 .form-control {
     border: 0px !important;
