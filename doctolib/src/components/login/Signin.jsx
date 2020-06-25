@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Container, Col, Row } from "reactstrap";
+import { Form, Button, Container, Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import styles from "./Signin.module.css";
 
 const SignIn = () => {
-    const logo = require("../img/logo.png");
+    const logo = require("../img/logowhite.png");
 
     const [email, setEmail] = useState([""]);
     const [password, setPassword] = useState("");
@@ -23,14 +23,14 @@ const SignIn = () => {
                 </Row>
                 <Row className={styles.formContainer}>
                     <Form className={styles.form}>
-                        <Input
+                        <input
                             className={styles.inputs}
                             type="text"
                             value={email}
                             placeholder="email"
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <Input
+                        <input
                             className={styles.inputs}
                             type="text"
                             value={password}
@@ -54,12 +54,28 @@ const SignIn = () => {
                         </Button>
                     </Form>
                 </Row>
-
             </Container>
-                        
-
         </div>
     );
 };
 
 export default SignIn;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
