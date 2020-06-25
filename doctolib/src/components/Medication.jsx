@@ -7,6 +7,37 @@ import styles from "./Medication.module.css";
 import alarm from "../img/clock.png";
 import { Link } from "react-router-dom";
 
+const pills = [
+  {
+    id: 1,
+    label: "Pillule A",
+    dosage: "",
+    frequency: 3,
+    time: "per day",
+  },
+  {
+    id: 2,
+    label: "Pillule B",
+    dosage: "",
+    frequency: 2,
+    time: "per week",
+  },
+  {
+    id: 3,
+    label: "Pillule C",
+    dosage: "",
+    frequency: 1,
+    time: "per day",
+  },
+  {
+    id: 3,
+    label: "Pillule D",
+    dosage: "",
+    frequency: 3,
+    time: "per day",
+  },
+];
+
 function Medication() {
   const [collapseA, setCollapseA] = useState(false);
   const [collapseB, setCollapseB] = useState(false);
@@ -60,8 +91,10 @@ function Medication() {
               <th scope="row">
                 <input type="checkbox" onClick={toggleA} />
               </th>
-              <td>Pillule A</td>
-              <td className={styles.colRight}>3 per day</td>
+              <td>{pills[0].label}</td>
+              <td className={styles.colRight}>
+                {pills[0].frequency} {pills[0].time}
+              </td>
             </tr>
             <tr>
               <td />
@@ -91,8 +124,10 @@ function Medication() {
               <th scope="row">
                 <input type="checkbox" onClick={toggleB} />
               </th>
-              <td>Pillule B</td>
-              <td className={styles.colRight}>2 per week</td>
+              <td>{pills[1].label}</td>
+              <td className={styles.colRight}>
+                {pills[1].frequency} {pills[1].time}
+              </td>
             </tr>
             <tr>
               <td />
@@ -122,8 +157,10 @@ function Medication() {
               <th scope="row">
                 <input type="checkbox" onClick={toggleC} />
               </th>
-              <td>Pillule C</td>
-              <td className={styles.colRight}>1 per day</td>
+              <td>{pills[2].label}</td>
+              <td className={styles.colRight}>
+                {pills[2].frequency} {pills[2].time}
+              </td>
             </tr>
             <tr>
               <td />
@@ -153,8 +190,10 @@ function Medication() {
               <th scope="row">
                 <input type="checkbox" onClick={toggleD} />
               </th>
-              <td>Pillule D</td>
-              <td className={styles.colRight}>3 per day</td>
+              <td>{pills[3].label}</td>
+              <td className={styles.colRight}>
+                {pills[3].frequency} {pills[3].time}
+              </td>
             </tr>
             <tr>
               <td />
