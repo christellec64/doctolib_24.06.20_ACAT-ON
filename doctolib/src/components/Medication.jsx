@@ -5,8 +5,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import styles from "./Medication.module.css";
 import alarm from "../img/clock.png";
+import { Link } from "react-router-dom";
 
-function Medication () {
+function Medication() {
   const [collapseA, setCollapseA] = useState(false);
   const [collapseB, setCollapseB] = useState(false);
   const [collapseC, setCollapseC] = useState(false);
@@ -182,8 +183,10 @@ function Medication () {
           </tbody>
         </Table>
         <Row>
-          <Col xs={{ size: 4, offset: 8 }}>
-            <Button className={styles.buttonMedication}>+ Add medication</Button>
+          <Col xs={{ size: 6, offset: 6 }}>
+            <Link to="/treatment">
+              <p className={styles.treatmentMedication}>+ Add medication</p>
+            </Link>
           </Col>
         </Row>
       </Container>
