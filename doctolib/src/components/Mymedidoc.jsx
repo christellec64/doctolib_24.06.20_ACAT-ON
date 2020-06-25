@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Card,
-  CardBody,
   CardTitle,
   Col,
   CardGroup,
@@ -62,10 +61,7 @@ function Mymedidoc() {
         <Row>
           {documents.map((doc) => {
             return (
-              <Col xs="4" className={styles.mymedidocCol}>
-                <UncontrolledCollapse toggler={doc.id}>
-                  <Button className={styles.mymedidocButton}>&ndash;</Button>
-                </UncontrolledCollapse>
+              <Col xs="6" className={styles.mymedidocCol}>
                 <CardGroup>
                   <Card className={styles.mymedidocCard}>
                     <CardImg src={doc.src} alt={doc.title} id={doc.id} />
@@ -74,12 +70,20 @@ function Mymedidoc() {
                     </CardTitle>
                   </Card>
                 </CardGroup>
+                <UncontrolledCollapse
+                  toggler={doc.id}
+                  className={styles.mymedidocbtn}
+                >
+                  <Button className={styles.mymedidocRemoveButton}>
+                    &ndash;
+                  </Button>
+                </UncontrolledCollapse>
               </Col>
             );
           })}
         </Row>
-        <Row>
-          <Button>add documents</Button>
+        <Row className={styles.mymedidocRow}>
+          <Button className={styles.mymedidocButton}>+ add documents</Button>
         </Row>
       </Container>
       <Footer />

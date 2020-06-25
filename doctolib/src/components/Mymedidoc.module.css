@@ -2,19 +2,37 @@
   margin-top: 3vh;
 }
 .cardTitleMedidoc {
-  font-size: 0.3rem;
+  font-size: 0.8rem;
   text-align: center;
   margin-top: 1vw;
 }
 .mymedidocCard:hover {
   cursor: pointer;
 }
-.mymedidocButton {
+.mymedidocRemoveButton {
   background-color: #f3724a !important;
   border: none !important;
   height: 2vh;
   font-size: 0.6rem !important;
-  width: 1vw;
+  width: 2vw;
   text-align: center !important;
   padding: 0 3vw 0 2vw !important;
+}
+.mymedidocbtn {
+  display: flex;
+  justify-content: flex-end;
+}
+.mymedidocButton {
+  background-color: #004163 !important;
+  border: none !important;
+  height: 3vh;
+  font-size: 0.6rem !important;
+  text-align: center !important;
+  padding: 0 1vw 0 1vw !important;
+}
+.mymedidocRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2vw;
+  padding-right: 2vw;
 }
