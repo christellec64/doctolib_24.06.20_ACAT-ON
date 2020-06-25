@@ -1,0 +1,24 @@
+### Get all tips
+GET http://localhost:8000/tips
+
+### Get one tip
+GET http://localhost:8000/tips/4
+
+### Post one tip
+POST http://localhost:8000/tips 
+Content-Type: application/json
+
+{
+    "content": "Eat 5 fruits and vegetables per day"
+}
+
+### Put one tip
+PUT http://localhost:8000/tips/3
+Content-Type: application/json
+
+{
+    "content": "Eat 5 fruits and vegetables per day !"
+}
+
+### Delete one tip
+DELETE http://localhost:8000/tips/2

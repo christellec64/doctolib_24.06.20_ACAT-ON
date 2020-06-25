@@ -1,17 +1,13 @@
 import React from 'react';
-import styles from './Dashboard.module.css'
-import logo from './img/logo.png';
+import Navbar from './Navbar';
+import Footer from './Footer';
+
 
 function Dashboard() {
   return (
     <div>
-      <div className={styles.navbar}>
-        <ul className={styles.listItem}>
-          <li className={styles.Item}><img src={logo} alt='logo app' />MediMe</li>
-          <li className={styles.Item}>MediMe</li>
-        </ul>
-      </div>
-
+      <Navbar />
+      <Footer />
     </div>
   );
 }

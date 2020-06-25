@@ -7,6 +7,7 @@ import CreateAccount from "./components/login/Create_account";
 import MyInformation from "./components/login/MyInformation";
 import Home from "./components/Home";
 import MyTreatment from "./components/login/Mytreatment";
+import Medication from "./components/Medication";
 
 function App() {
     return (
@@ -41,6 +42,7 @@ function App() {
                     <Route exact path="/stat" />
                     <Route exact path="/ordonance" />
                     <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/medication" component={Medication} />
                 </Switch>
             </Router>
         </>
