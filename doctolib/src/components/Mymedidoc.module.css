@@ -22,12 +22,12 @@
 .mymedidocRemoveButton {
   background-color: #f3724a !important;
   border: none !important;
-  height: 2vh;
-  font-size: 0.6rem !important;
-  width: 2vw;
+  height: 4vh;
+  font-size: 0.7rem !important;
   text-align: center !important;
-  padding: 0 3vw 0 2vw !important;
+  padding: 0 2vw 0 2vw !important;
 }
+
 .mymedidocbtn {
   display: flex;
   justify-content: flex-end;
