@@ -8,7 +8,7 @@ import LineGraph from "./LineGraph";
 import styles from "./Stat.module.css";
 import { Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
 
-function stat() {
+function Stat() {
   const jour = new Date().getDate();
   const month = new Date().getMonth();
   const year = new Date().getFullYear();
@@ -91,4 +91,4 @@ function stat() {
   );
 }
 
-export default stat;
+export default Stat;
