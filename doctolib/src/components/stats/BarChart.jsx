@@ -26,7 +26,6 @@ class BarChart extends React.Component {
   }
 
   render() {
-    console.log(this.state.values);
     const { values } = this.state;
     return (
       <>
