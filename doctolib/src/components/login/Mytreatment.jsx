@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import styles from "./Create_account.module.css";
+import styles from "./Mytreatment.module.css";
 
-const CreateAccount = () => {
-    const [firstname, setFirstname] = useState([""]);
-    const [lastname, setLastname] = useState([""]);
-    const [email, setEmail] = useState([""]);
-    const [password, setPassword] = useState("");
-
+const MyTreatment = () => {
+    const [medication, setMedication] = useState([""]);
+    const [dosage, setDosage] = useState([""]);
+    const [frequency, setFrequency] = useState([""]);
+    const [time, setTime] = useState([""]);
+  
     const logo = require("../img/logowhite.png");
     return (
         <div className={styles.background}>
@@ -28,35 +28,37 @@ const CreateAccount = () => {
                         <input
                             className={styles.inputs}
                             type="text"
-                            value={firstname}
-                            placeholder="Firstname"
-                            onChange={(e) => setFirstname(e.target.value)}
+                            value={medication}
+                            placeholder="Medication"
+                            onChange={(e) => setMedication(e.target.value)}
                         />
                         <input
                             className={styles.inputs}
                             type="text"
-                            value={lastname}
-                            placeholder="Lastname"
-                            onChange={(e) => setLastname(e.target.value)}
+                            value={dosage}
+                            placeholder="Dosage"
+                            onChange={(e) => setDosage(e.target.value)}
                         />
                         <input
                             className={styles.inputs}
                             type="text"
-                            value={email}
-                            placeholder="Email"
-                            onChange={(e) => setEmail(e.target.value)}
+                            value={frequency}
+                            placeholder="Frequency per day"
+                            onChange={(e) => setFrequency(e.target.value)}
                         />
+                        <label className={styles.timelabel}>What time do you take your first medication?
                         <input
                             className={styles.inputs}
-                            type="text"
-                            value={password}
-                            placeholder="Password"
-                            onChange={(e) => setPassword(e.target.value)}
+                            type="time"
+                            value={time}
+                            placeholder="What time do you take your first medication?"
+                            onChange={(e) => setTime(e.target.value)}
                         />
+                        </label>
 
                         <Button className={styles.button}>
                             <Link to="/information" className={styles.signlinks}>
-                                Sign up
+                                Save
                             </Link>
                         </Button>
                     </Form>
@@ -66,4 +68,4 @@ const CreateAccount = () => {
     );
 };
 
-export default CreateAccount;
+export default MyTreatment;
