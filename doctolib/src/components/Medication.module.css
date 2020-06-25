@@ -1,3 +1,39 @@
-.nextMeditationAlert{
-    
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.nextMeditationContainer {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+.nextMeditationAlert {
+  background-color: #004163;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nextMeditationAlert p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 2vh 0 2vh 0;
+  padding: 0;
+}
+.medicationTableContainer {
+  margin-bottom: 2vw;
+}
+.medicationTable {
+  background-color: #b5e2f5;
+  width: 100%;
+  margin: 4vh 0 3vh 0;
+}
+.colRight {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1vw;
+}
+.buttonMedication {
+  background-color: #f3724a !important;
+  border: none !important;
+  height:3.5vh;
+  font-size: 0.6rem !important;
+  margin-right: 0.5vw;
 }

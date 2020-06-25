@@ -1,0 +1,28 @@
+### Get all blood glucose statement
+GET http://localhost:8000/glucose
+
+### Get one blood glucose statement
+GET http://localhost:8000/glucose/3
+
+### Post one blood glucose statement
+POST http://localhost:8000/glucose 
+Content-Type: application/json
+
+{
+    "breakfast" : "1.8",
+    "lunch": "1.8",
+    "diner": "1.9"
+}
+
+### Put one blood glucose statement
+PUT http://localhost:8000/glucose/3
+Content-Type: application/json
+
+{
+    "breakfast" : "1.8",
+    "lunch": "1.8",
+    "diner": "1.7"
+}
+
+### Delete one blood glucose statement
+DELETE http://localhost:8000/glucose/2

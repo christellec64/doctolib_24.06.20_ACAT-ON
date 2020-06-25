@@ -1,0 +1,25 @@
+### GET all positive idea
+GET http://localhost:8000/ideas
+
+### GET one positive idea
+GET http://localhost:8000/ideas/4
+
+### POST one positive idea
+POST http://localhost:8000/ideas
+Content-Type: application/json
+
+{
+  "text" : "Hello wold!"
+}
+
+### PUT one positive idea
+PUT http://localhost:8000/ideas/1
+Content-Type: application/json
+
+{
+   "text" : "Bonjour vous"
+}
+
+### DELETE one idea
+DELETE  http://localhost:8000/ideas/5
+
