@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Medication from "./components/Medication";
+import Mymedidoc from "./components/Mymedidoc";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route exact path="/treatment" />
           <Route exact path="/pilllist" />
           <Route exact path="/stat" />
-          <Route exact path="/ordonance" />
+          <Route exact path="/ordonance" component={Mymedidoc} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/medication" component={Medication} />
         </Switch>
