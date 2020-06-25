@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.banner{
+  margin-top: 1rem;
+  font-family: 'Lato';
+}
+
+.blueBanner {
+  background-color: #004163;
+  padding: 0.25rem;
+}
+
+.clock {
+  width: 2rem;
+}
+
+.textBanner {
+  color: white;
+}
+
+.table {
+  margin-top: 1rem;
+}
+
+.rowTable {
+  color: #004163;
+  background-color: #B5E2F5;
+  border-bottom: 0.15rem solid white !important;
+}
+
+.advice {
+  margin-top: 1rem;
+  font-family: 'Lato';
+}
+
+.adviceText {
+  align-self: center;
+}
+
+.bulbImage {
+  width: 3rem;
+}
+
+.quote {
+  margin-top: 1rem;
+  font-family: 'Lato';
+  text-align: left;
+}
+
+.doubleQuote {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #E74424;
+}
+
+.score {
+  margin-top: 1rem;
+}
+
+.badge {
+  width: 3rem;
+}
+
+
+
+
+
+
+
+
+
