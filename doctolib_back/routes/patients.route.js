@@ -1,5 +1,8 @@
 const express = require("express");
 const connection = require("../config");
+
+// const {authToken} = require("../middlewares")
+
 const patient = express.Router();
 const medidoc = require("./medidoc.route");
 

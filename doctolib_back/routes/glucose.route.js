@@ -1,5 +1,6 @@
 const express = require("express");
 const connection = require("../config");
+const {authToken} = require("../middlewares")
 const glucose = express.Router();
 
 glucose.get("/", (req, res) => {
@@ -28,6 +29,7 @@ glucose.get("/:id", (req, res) => {
 
 glucose.post("/", (req, res) => {
   const formData = req.body;
+
   connection.query("INSERT INTO Glucose SET ? ", formData, (err, results) => {
     if (err) {
       res.status(500).send(err.message);
@@ -40,6 +42,7 @@ glucose.post("/", (req, res) => {
 glucose.put("/:id", (req, res) => {
   const formData = req.body;
   const {id} = req.params;
+
   connection.query(
     "UPDATE Glucose SET ? WHERE id= ?",
     [formData, id],

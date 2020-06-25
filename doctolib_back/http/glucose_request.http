@@ -1,11 +1,13 @@
 ### Get all blood glucose statement
 GET http://localhost:8000/glucose
 
+
 ### Get one blood glucose statement
 GET http://localhost:8000/glucose/3
 
 ### Post one blood glucose statement
-POST http://localhost:8000/glucose 
+POST http://localhost:8000/glucose
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0b3RvLmplYW5AZ21haWwuY29tIiwiaWF0IjoxNTkzMDc0NjIyLCJleHAiOjE1OTMxNjEwMjJ9.cz1d4AlCl4j1tdeRRUFu2AdQ4ep3bAQPibQsKsQps0s 
 Content-Type: application/json
 
 {

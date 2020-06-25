@@ -1,5 +1,6 @@
 ### GET all patients
 GET http://localhost:8000/patients
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0b3RvLmplYW5AZ21haWwuY29tIiwiaWF0IjoxNTkzMDc0NjIyLCJleHAiOjE1OTMxNjEwMjJ9.cz1d4AlCl4j1tdeRRUFu2AdQ4ep3bAQPibQsKsQps0s
 
 ### GET one patients
 GET http://localhost:8000/patients/2
@@ -21,7 +22,7 @@ Content-Type: application/json
 }
 
 ### PUT one patient
-PUT http://localhost:8000/patients/1
+PUT http://localhost:8000/patients/2
 Content-Type: application/json
 
 {
@@ -33,8 +34,8 @@ Content-Type: application/json
     "doctor" : "dr House",    
     "doctor_mail" : "drhouse@gmail.com",
     "disease" :"diabet",
-    "email" : "toto.jean@gmail.com"
+    "email" : "jean@gmail.com"
 }
 
 ### DELETE one patient
-DELETE  http://localhost:8000/patients/1
+DELETE  http://localhost:8000/patients/3
