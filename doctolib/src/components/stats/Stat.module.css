@@ -27,6 +27,16 @@
   margin-top : 0 !important;
 }
 
+.statsContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyContainer {
+    flex: 1;
+}
+
 .rowInput {
   height: 5vw !important;
   
