@@ -39,7 +39,7 @@ const SignIn = () => {
                         />
 
                         <Button className={styles.button}>
-                            <Link to="/home" className={styles.signlinks}>
+                            <Link to="/dashboard" className={styles.signlinks}>
                                 Submit
                             </Link>
                         </Button>
@@ -60,6 +60,7 @@ const SignIn = () => {
 };
 
 export default SignIn;
+
 
 
 

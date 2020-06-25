@@ -76,7 +76,7 @@ const MyTreatment = () => {
 
                         <Button className={styles.button}>
                             <Link
-                                to="/information"
+                                to="/dashboard"
                                 className={styles.signlinks}
                             >
                                 Save
