@@ -19,18 +19,14 @@
   color: white;
 }
 
-.listPills {
+.table {
   margin-top: 1rem;
 }
 
-.score {
-  margin-top: 1rem;
-}
-
-.quote {
-  margin-top: 1rem;
-  font-family: 'Lato';
-  text-align: center;
+.rowTable {
+  color: #004163;
+  background-color: #B5E2F5;
+  border-bottom: 0.15rem solid white !important;
 }
 
 .advice {
@@ -42,7 +38,35 @@
   align-self: center;
 }
 
-
 .bulbImage {
   width: 3rem;
 }
+
+.quote {
+  margin-top: 1rem;
+  font-family: 'Lato';
+  text-align: left;
+}
+
+.doubleQuote {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #E74424;
+}
+
+.score {
+  margin-top: 1rem;
+}
+
+.badge {
+  width: 3rem;
+}
+
+
+
+
+
+
+
+
+
