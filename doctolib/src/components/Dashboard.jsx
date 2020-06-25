@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className={styles.containerDashboard}>
       <div className={styles.content}>
-      <Navbar />
+      <Navbar title="My dashboard" />
       <ContentDashboard />
       </div>
       <Footer />
