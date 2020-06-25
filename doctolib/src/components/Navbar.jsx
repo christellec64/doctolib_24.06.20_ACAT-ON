@@ -29,13 +29,9 @@ function Navbar({ title }) {
               </Link>
             </Row>
           </Col>
-<<<<<<< HEAD
-          <Col xs={{ size: 5, offset: 0 }} className={styles.title}>{title}</Col>
-=======
           <Col xs={{ size: 5, offset: 0.5 }} className={styles.title}>
             {title}
           </Col>
->>>>>>> d5ef7a9fbf1361bae9e19bfc1bad27d07b67533b
           <Col xs="1.5">
             <img src={bell} alt="notification" className={styles.item} />
           </Col>

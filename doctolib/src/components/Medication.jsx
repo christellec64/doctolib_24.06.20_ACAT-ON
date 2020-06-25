@@ -20,12 +20,8 @@ import Footer from "./Footer";
 import styles from "./Medication.module.css";
 import alarm from "../img/clock.png";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import alarm from "../img/alarm.png";
-=======
 import Axios from "axios";
 import { api_url } from "../api";
->>>>>>> d5ef7a9fbf1361bae9e19bfc1bad27d07b67533b
 
 class Medication extends React.Component {
   constructor(props) {
