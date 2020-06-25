@@ -11,7 +11,7 @@ Content-Type: application/json
 {
     "title": "My medical prescription",
     "url": "https://www.ameli.fr/sites/default/files/formualires/204/s3326.pdf",
-    "id_patient" : "1"
+    "patient_id" : "1"
 }
 
 ### PUT one medidoc
