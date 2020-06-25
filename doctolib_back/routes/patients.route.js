@@ -31,6 +31,7 @@ patient.get("/:patientId", (req, res) => {
 
 patient.post("/", (req, res) => {
   const formData = req.body;
+  console.log(formData)
   connection.query("INSERT INTO patient SET ?", formData, (err, results) => {
     if (err) {
       res.status(500).send("Error when saving patients");

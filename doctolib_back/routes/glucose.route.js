@@ -30,9 +30,9 @@ glucose.post("/", (req, res) => {
   const formData = req.body;
   connection.query("INSERT INTO Glucose SET ? ", formData, (err, results) => {
     if (err) {
-      res.status(500).send(err.message);
+      res.status(422).send(err.message);
     } else {
-      res.status(201).send("The blood glucose statement has been filled");
+      res.status(201).json(formData);
     }
   });
 });

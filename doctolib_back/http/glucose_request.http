@@ -9,20 +9,22 @@ POST http://localhost:8000/glucose
 Content-Type: application/json
 
 {
-    "breakfast" : "1.8",
-    "lunch": "1.8",
-    "diner": "1.9"
+    "breakfast" : "1.1",
+    "lunch": "1.9",
+    "diner": "1.5",
+    "date" : "25/06/2020"
 }
 
 ### Put one blood glucose statement
-PUT http://localhost:8000/glucose/3
+PUT http://localhost:8000/glucose/7
 Content-Type: application/json
 
 {
-    "breakfast" : "1.8",
-    "lunch": "1.8",
-    "diner": "1.7"
+    "breakfast" : "0.9",
+    "lunch": "1.2",
+    "diner": "2.5",
+    "date" : "23/06/2020"
 }
 
 ### Delete one blood glucose statement
-DELETE http://localhost:8000/glucose/2
+DELETE http://localhost:8000/glucose/6

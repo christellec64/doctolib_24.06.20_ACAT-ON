@@ -16,8 +16,8 @@ Content-Type: application/json
     "weight" : "65",
     "doctor" : "dr House",    
     "doctor_mail" : "drhouse@gmail.com",
-    "disease" :"diabet",
-    "email" : "toto.jean@gmail.com"
+    "email" : "toto.jean@gmail.com",
+    "disease" :"diabet"
 }
 
 ### PUT one patient

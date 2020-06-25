@@ -6,7 +6,7 @@ POST http://localhost:8000/weight
 Content-Type: application/json
 
 {
-    "weight": "50"
+    "weight": "68"
 }
 
 ### PUT one medidoc
