@@ -6,37 +6,39 @@ import Footer from "./Footer";
 import styles from "./Medication.module.css";
 import alarm from "../img/clock.png";
 import { Link } from "react-router-dom";
+import Axios from "axios";
+import { api_url } from "../api";
 
-const pills = [
-  {
-    id: "A",
-    label: "Pillule A",
-    dosage: "",
-    frequency: 3,
-    time: "per day",
-  },
-  {
-    id: "B",
-    label: "Pillule B",
-    dosage: "",
-    frequency: 1,
-    time: "per day",
-  },
-  {
-    id: "C",
-    label: "Pillule C",
-    dosage: "",
-    frequency: 2,
-    time: "per week",
-  },
-  {
-    id: "D",
-    label: "Pillule D",
-    dosage: "",
-    frequency: 3,
-    time: "per day",
-  },
-];
+// const pills = [
+//   {
+//     id: "A",
+//     label: "Pillule A",
+//     dosage: "",
+//     frequency: 3,
+//     time: "per day",
+//   },
+//   {
+//     id: "B",
+//     label: "Pillule B",
+//     dosage: "",
+//     frequency: 1,
+//     time: "per day",
+//   },
+//   {
+//     id: "C",
+//     label: "Pillule C",
+//     dosage: "",
+//     frequency: 2,
+//     time: "per week",
+//   },
+//   {
+//     id: "D",
+//     label: "Pillule D",
+//     dosage: "",
+//     frequency: 3,
+//     time: "per day",
+//   },
+// ];
 
 class Medication extends React.Component {
   constructor(props) {
@@ -45,12 +47,23 @@ class Medication extends React.Component {
       collapse: false,
       id: "",
       status: "Closed",
+      pill: [],
     };
     this.toggle = this.toggle.bind(this);
     this.onEntering = this.onEntering.bind(this);
     this.onEntered = this.onEntered.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+    this.getPills = this.getPills.bind(this);
+  }
+  componentDidMount() {
+    this.getPills();
+  }
+  getPills() {
+    Axios.get(`${api_url}/medication`).then((res) => {
+      console.log(res);
+      this.setState({ pill: res.data });
+    });
   }
   toggle() {
     this.setState({ collapse: !this.state.collapse });
@@ -68,6 +81,7 @@ class Medication extends React.Component {
     this.setState({ status: "Closed" });
   }
   render() {
+    const { pill } = this.state;
     return (
       <>
         <Navbar title="My medication" />
@@ -97,7 +111,7 @@ class Medication extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {pills.map((item) => {
+              {pill.map((item) => {
                 return (
                   <>
                     <tr>
