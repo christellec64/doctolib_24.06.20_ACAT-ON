@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/treatment" />
           <Route exact path="/pilllist" />
           <Route exact path="/stat" />
-          <Route exact path="/ordonance" />
+          <Route exact path="/mymedidocs" />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/medication" component={Medication} />
         </Switch>
