@@ -12,15 +12,15 @@ import { Component } from "react";
 import { api_url } from "../../api.js";
 import Axios from "axios";
 
-class stat extends Component {
+class Stat extends Component {
   constructor(props) {
     super(props);
     this.state = {
       breakfast: {},
-      lunch : {},
-      diner :{},
+      lunch: {},
+      diner: {},
       weight: {},
-      date : `${this.day}/${this.month + 1}/${this.year}`
+      date: `${this.day}/${this.month + 1}/${this.year}`,
     };
 
     this.handleChangeBreakfast = this.handleChangeBreakfast.bind(this);
@@ -71,7 +71,7 @@ class stat extends Component {
     const { weight } = this.state;
     this.setState({
       ...weight,
-      [e.target.name] : e.target.value,
+      [e.target.name]: e.target.value,
     });
   }
 
@@ -81,8 +81,9 @@ class stat extends Component {
       `${api_url}/weight`,
       { weight },
       { header: { "Content-Type": "application.json" } }
-    ).then(res => console.log(res))
-    .catch((err) => console.log(err.message));
+    )
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err.message));
   }
 
   handleSubmitGlucose(e) {
@@ -96,9 +97,9 @@ class stat extends Component {
   }
 
   render() {
-    console.log(this.state.weight)
-    console.log(this.state.diner)
-    
+    console.log(this.state.weight);
+    console.log(this.state.diner);
+
     return (
       <>
         <Navbar title="My stats" />
@@ -197,4 +198,4 @@ class stat extends Component {
   }
 }
 
-export default stat;
+export default Stat;

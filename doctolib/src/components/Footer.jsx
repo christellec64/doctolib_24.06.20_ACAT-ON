@@ -1,14 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Row, Col } from "reactstrap";
 
-import home from "../img/home.png";
-import graph from "../img/graph.png";
-import pills from "../img/pills.png";
-import note from "../img/note.png";
+import home from "./img/home.png";
+import graph from "./img/graph.png";
+import pills from "./img/pills.png";
+import note from "./img/note.png";
 
 import styles from "./Footer.module.css";
-
-import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -21,18 +20,18 @@ function Footer() {
             </Link>
           </Col>
           <Col xs="3">
-          <Link to="/stat">
-            <img src={graph} alt="Stats" className={styles.item} />
+            <Link to="/stat">
+              <img src={graph} alt="Stats" className={styles.item} />
             </Link>
           </Col>
           <Col xs="3">
-          <Link to="/medication">
-            <img src={pills} alt="Pills" className={styles.item} />
+            <Link to="/medication">
+              <img src={pills} alt="Pills" className={styles.item} />
             </Link>
           </Col>
           <Col xs="3">
-          <Link to="/mymedidocs">
-            <img src={note} alt="Note" className={styles.item} />
+            <Link to="/mymedidocs">
+              <img src={note} alt="Note" className={styles.item} />
             </Link>
           </Col>
         </Row>

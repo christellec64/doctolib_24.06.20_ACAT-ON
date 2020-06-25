@@ -1,10 +1,11 @@
 import React from "react";
 
 import styles from "./Navbar.module.css";
-import logo from "../img/logo.png";
-import bell from "../img/bell.png";
-import user from "../img/user.png";
-import logout from "../img/logout.png";
+
+import logo from "./img/logo.png";
+import bell from "./img/bell.png";
+import user from "./img/user.png";
+import logout from "./img/logout.png";
 
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -28,9 +29,13 @@ function Navbar({ title }) {
               </Link>
             </Row>
           </Col>
+<<<<<<< HEAD
+          <Col xs={{ size: 5, offset: 0 }} className={styles.title}>{title}</Col>
+=======
           <Col xs={{ size: 5, offset: 0.5 }} className={styles.title}>
             {title}
           </Col>
+>>>>>>> d5ef7a9fbf1361bae9e19bfc1bad27d07b67533b
           <Col xs="1.5">
             <img src={bell} alt="notification" className={styles.item} />
           </Col>
