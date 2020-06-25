@@ -20,7 +20,7 @@ medidoc.get("/:id", (req, res) => {
   const id = req.params.id;
   const patientId = req.params.patientId;
   connection.query(
-    `SELECT * FROM medidoc WHERE id=${id} AND id_patient= ${patientId}`,
+    `SELECT * FROM medidoc WHERE id=${id} AND patient_id= ${patientId}`,
     (err, results) => {
       if (err) {
         res.status(500).send("Error when retrieving the document");

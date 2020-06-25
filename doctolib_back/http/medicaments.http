@@ -1,0 +1,30 @@
+### Get all medicaments
+GET http://localhost:8000/medicaments
+
+### Get one medicaments
+GET http://localhost:8000/medicaments/3
+
+### Post one medicaments
+POST http://localhost:8000/medicaments 
+Content-Type: application/json
+
+{
+    "label" : "pilluleB",
+    "dosage": "200ml",
+    "frequency": "1",
+    "time": "12:0:00"
+}
+
+### Put one medicaments
+PUT http://localhost:8000/medicaments/12
+Content-Type: application/json
+
+{
+    "label" : "pilluleC",
+    "dosage": "100ml",
+    "frequency": "4",
+    "time": "10:10:00"
+}
+
+### Delete one medicaments
+DELETE http://localhost:8000/medicaments/10
