@@ -32,13 +32,13 @@ const CreateAccount = ({ setUserData, changePage, userData }) => {
             />
             <input
               className={styles.inputs}
-              type="password"
+              type="text"
               placeholder="Email"
               onChange={(e) => setUserData({ ...userData, email: e.target.value })}
             />
             <input
               className={styles.inputs}
-              type="text"
+              type="password"
               placeholder="Password"
               onChange={(e) => setUserData({ ...userData, password: e.target.value })}
             />
