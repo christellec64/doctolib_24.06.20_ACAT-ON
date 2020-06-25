@@ -28,7 +28,7 @@ function Navbar({ title }) {
               </Link>
             </Row>
           </Col>
-          <Col xs={{ size: 5, offset: 0 }} className={styles.title}>
+          <Col xs={{ size: 5, offset: 0.5 }} className={styles.title}>
             {title}
           </Col>
           <Col xs="1.5">
