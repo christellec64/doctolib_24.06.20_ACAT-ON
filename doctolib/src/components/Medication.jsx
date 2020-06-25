@@ -73,7 +73,7 @@ class Medication extends React.Component {
   render() {
     const { pill } = this.state;
     return (
-      <>
+      <div className={styles.medicationContainer}>
         <Navbar title="My medication" />
         <Container className={styles.nextMeditationContainer}>
           <Row className={styles.nextMeditationAlert}>
@@ -160,7 +160,7 @@ class Medication extends React.Component {
           </Row>
         </Container>
         <Footer />
-      </>
+      </div>
     );
   }
 }
