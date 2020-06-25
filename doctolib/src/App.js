@@ -16,9 +16,8 @@ function App() {
           <Route exact path="/createaccount" />
           <Route exact path="/information" />
           <Route exact path="/treatment" />
-          <Route exact path="/pilllist" />
           <Route exact path="/stat" component={Stat}/>
-          <Route exact path="/ordonance" component={Mymedidoc} />
+          <Route exact path="/mymedidocs" component={Mymedidoc} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/medication" component={Medication} />
         </Switch>
