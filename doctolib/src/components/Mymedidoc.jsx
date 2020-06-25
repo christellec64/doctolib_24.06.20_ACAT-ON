@@ -55,9 +55,9 @@ const documents = [
 ];
 function Mymedidoc() {
   return (
-    <>
+    <div className={styles.prescriptionContainer}>
       <Navbar title="My MediDoc" />
-      <Container>
+      <Container className={styles.bodyContainer}>
         <Row>
           {documents.map((doc) => {
             return (
@@ -87,7 +87,7 @@ function Mymedidoc() {
         </Row>
       </Container>
       <Footer />
-    </>
+    </div>
   );
 }
 

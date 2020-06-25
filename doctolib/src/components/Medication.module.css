@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
+.medicationContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
 .nextMeditationContainer {
   margin-top: 2vw;
   margin-bottom: 2vw;
+  flex:1;
 }
 .nextMeditationAlert {
   background-color: #004163;

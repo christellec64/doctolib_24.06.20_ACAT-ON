@@ -13,7 +13,7 @@ import Stat from "./components/stats/Stat.jsx";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Router>
         <Switch>
             <Route exact path="/" component={Home} />
@@ -27,7 +27,7 @@ function App() {
             <Route exact path="/medication" component={Medication} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 export default App;
