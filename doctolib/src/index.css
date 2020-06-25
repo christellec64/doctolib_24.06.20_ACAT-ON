@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.chartjs-render-monitor {
+  height : 45vw !important;
+  width : 90vw !important;
+  margin-left : 8vw;
+}
