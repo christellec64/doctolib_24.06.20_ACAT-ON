@@ -1,10 +1,10 @@
 import React from "react";
 
 import styles from "./Navbar.module.css";
-import logo from "../img/logo.png";
-import bell from "../img/bell.png";
-import user from "../img/user.png";
-import logout from "../img/logout.png";
+import logo from "./img/logo.png";
+import bell from "./img/bell.png";
+import user from "./img/user.png";
+import logout from "./img/logout.png";
 
 import { Container, Row, Col } from "reactstrap";
 

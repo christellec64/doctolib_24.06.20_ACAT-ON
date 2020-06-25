@@ -1,9 +1,9 @@
 import React from 'react';
 
-import home from '../img/home.png';
-import graph from '../img/graph.png';
-import pills from '../img/pills.png';
-import note from '../img/note.png';
+import home from './img/home.png';
+import graph from './img/graph.png';
+import pills from './img/pills.png';
+import note from './img/note.png';
 
 import styles from './Footer.module.css';
 
