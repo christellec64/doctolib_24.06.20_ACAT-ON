@@ -2,8 +2,10 @@ const express = require("express");
 const connection = require("../config");
 const patient = express.Router();
 const medidoc = require("./medidoc.route");
+const medicaments = require("./medicaments.route");
 
 patient.use("/:patientId/medidocs", medidoc);
+patient.use("/:patientId/medicaments", medicaments);
 
 patient.get("/", (req, res) => {
   connection.query("SELECT * FROM patient", (err, results) => {

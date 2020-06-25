@@ -52,4 +52,8 @@ medicaments.delete("/:id", (req, res) => {
   });
 });
 
+<<<<<<< HEAD
 module.exports = medicaments;
+=======
+module.exports = medicaments;
+>>>>>>> 56e64b356f2c70c775274868e98917cc5b02f404
