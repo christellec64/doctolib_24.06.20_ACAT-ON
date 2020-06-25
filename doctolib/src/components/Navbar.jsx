@@ -23,7 +23,9 @@ function Navbar({ title }) {
               <Col className={styles.medime}>MediMe</Col>
             </Row>
           </Col>
-          <Col xs={{ size: 5, offset: 0.5 }} className={styles.title}>{title}</Col>
+          <Col xs={{ size: 5, offset: 0.5 }} className={styles.title}>
+            {title}
+          </Col>
           <Col xs="1.5">
             <img src={bell} alt="notification" className={styles.item} />
           </Col>
