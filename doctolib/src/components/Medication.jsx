@@ -4,7 +4,7 @@ import { Container, Table, Row, Col, Button, Collapse } from "reactstrap";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import styles from "./Medication.module.css";
-import alarm from "../img/alarm.png";
+import alarm from "../img/clock.png";
 
 function Medication () {
   const [collapseA, setCollapseA] = useState(false);
@@ -182,8 +182,8 @@ function Medication () {
           </tbody>
         </Table>
         <Row>
-          <Col xs={{ size: 6, offset: 8 }}>
-            <Button className={styles.buttonMedication}>Add medication</Button>
+          <Col xs={{ size: 4, offset: 8 }}>
+            <Button className={styles.buttonMedication}>+ Add medication</Button>
           </Col>
         </Row>
       </Container>
