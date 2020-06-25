@@ -1,5 +1,19 @@
 import React from "react";
-import { Container, Table, Row, Col, Button, Collapse } from "reactstrap";
+import {
+  Container,
+  Table,
+  Row,
+  Col,
+  Button,
+  Collapse,
+  Modal,
+  ModalFooter,
+  Input,
+  InputGroupText,
+  InputGroupAddon,
+  InputGroup,
+  ModalBody,
+} from "reactstrap";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -9,37 +23,6 @@ import { Link } from "react-router-dom";
 import Axios from "axios";
 import { api_url } from "../api";
 
-// const pills = [
-//   {
-//     id: "A",
-//     label: "Pillule A",
-//     dosage: "",
-//     frequency: 3,
-//     time: "per day",
-//   },
-//   {
-//     id: "B",
-//     label: "Pillule B",
-//     dosage: "",
-//     frequency: 1,
-//     time: "per day",
-//   },
-//   {
-//     id: "C",
-//     label: "Pillule C",
-//     dosage: "",
-//     frequency: 2,
-//     time: "per week",
-//   },
-//   {
-//     id: "D",
-//     label: "Pillule D",
-//     dosage: "",
-//     frequency: 3,
-//     time: "per day",
-//   },
-// ];
-
 class Medication extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +31,9 @@ class Medication extends React.Component {
       id: "",
       status: "Closed",
       pill: [],
+      modal: false,
+      frequency: {},
+      label: {},
     };
     this.toggle = this.toggle.bind(this);
     this.onEntering = this.onEntering.bind(this);
@@ -55,15 +41,51 @@ class Medication extends React.Component {
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
     this.getPills = this.getPills.bind(this);
+    this.deletePills = this.deletePills.bind(this);
+    this.getModal = this.getModal.bind(this);
+    this.postPills = this.postPills.bind(this);
+    this.handleChangeFrequency = this.handleChangeFrequency.bind(this);
+    this.handleChangeLabel = this.handleChangeLabel.bind(this);
   }
   componentDidMount() {
     this.getPills();
   }
+
+  handleChangeLabel(e) {
+    this.setState({
+      label: e.target.value,
+    });
+  }
+  handleChangeFrequency(e) {
+    this.setState({
+      frequency: e.target.value,
+    });
+  }
+  getModal() {
+    this.setState({ modal: !this.state.modal });
+  }
+
   getPills() {
-    Axios.get(`${api_url}/medication`).then((res) => {
+    Axios.get(`${api_url}/medicaments`).then((res) => {
       console.log(res);
       this.setState({ pill: res.data });
     });
+  }
+  postPills() {
+    const { pill } = this.state;
+    Axios.put(
+      `${api_url}/medicaments/${pill.id}`,
+      { ...pill },
+      { header: { "Content-Type": "application.json" } }
+    )
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err.message));
+  }
+  deletePills() {
+    const { pill } = this.state;
+    Axios.delete(`${api_url}/${pill.id}`).catch((err) =>
+      console.log(err.message)
+    );
   }
   toggle() {
     this.setState({ collapse: !this.state.collapse });
@@ -116,11 +138,15 @@ class Medication extends React.Component {
                   <>
                     <tr>
                       <th scope="row">
-                        <input type="checkbox" onClick={this.toggle} />
+                        <input
+                          type="checkbox"
+                          onClick={this.toggle}
+                          id={item.id}
+                        />
                       </th>
                       <td>{item.label}</td>
                       <td className={styles.colRight}>
-                        {item.frequency} {item.time}
+                        {item.frequency} per day
                       </td>
                     </tr>
                     <tr>
@@ -134,9 +160,47 @@ class Medication extends React.Component {
                           onExiting={this.onExiting}
                           onExited={this.onExited}
                         >
-                          <Button className={styles.buttonMedication}>
+                          <Button
+                            className={styles.buttonMedication}
+                            onClick={this.getModal}
+                          >
                             Edit
                           </Button>
+                          <Modal
+                            isOpen={this.state.modal}
+                            toggle={this.getModal}
+                          >
+                            <ModalBody>
+                              <InputGroup>
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText>Disease name</InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  onChange={this.handleChangeLabel}
+                                  placeholder={item.label}
+                                  type="text"
+                                  name={item.label}
+                                  id={item.id}
+                                />
+                              </InputGroup>
+                              <InputGroup>
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText>Frequency</InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  onChange={this.handleChangeFrequency}
+                                  placeholder={item.frequency}
+                                  type="text"
+                                  name={item.frequency}
+                                  id={item.id}
+                                />
+                              </InputGroup>
+                            </ModalBody>
+                            <ModalFooter>
+                              <Button onClick={this.postPills}>Save</Button>
+                              <Button onClick={this.getModal}>Cancel</Button>
+                            </ModalFooter>
+                          </Modal>
                         </Collapse>
                         <Collapse
                           isOpen={this.state.collapse}
@@ -145,7 +209,10 @@ class Medication extends React.Component {
                           onExiting={this.onExiting}
                           onExited={this.onExited}
                         >
-                          <Button className={styles.buttonMedication}>
+                          <Button
+                            className={styles.buttonMedication}
+                            onClick={this.deletePills}
+                          >
                             Delete
                           </Button>
                         </Collapse>
