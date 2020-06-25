@@ -1,17 +1,30 @@
 .h5 {
-  padding: 2vw 0 2vw 5vw;
+  padding: 1vw 0 1vw 5vw;
   background-color: #004163;
   color: white;
   font-size: 4vw;
+  margin-top : 1vw;
 }
 .h6 {
   font-size: 3.5vw;
   align-self : top;
   padding-left : 5vw;
+  margin-bottom : 0;
+}
+.h6bis {
+  font-size: 3.5vw;
+  align-self : top;
+  padding-left : 5vw;
+  margin-bottom : 0;
+  padding-top : 2vw;
 }
 .input {
   font-size: 0.7rem !important;
   height: 7vw !important;
+  border-top : transparent !important;
+  border-left : transparent !important;
+  border-right : transparent !important;
+  margin-top : 0 !important;
 }
 
 .rowInput {
@@ -30,5 +43,5 @@
     font-size: 0.8rem !important;
     background-color:  #f3724a !important;
     border : 1px solid  #f3724a !important;
-    padding : 1vw 2vw !important
+    padding : 1vw 2vw !important;
 }

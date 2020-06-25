@@ -13,5 +13,7 @@ code {
 }
 
 .chartjs-render-monitor {
-  height : 160px !important;
+  height : 40vw !important;
+  width : 80vw !important;
+  margin-left : 8vw;
 }
