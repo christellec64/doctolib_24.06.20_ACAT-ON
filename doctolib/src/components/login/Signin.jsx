@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import styles from "./Signin.module.css";
 
 const SignIn = () => {
+    const logo = require('../img/logo.png')
+
     const [email, setEmail] = useState([""]);
     const [password, setPassword] = useState("");
     return (
         <div className={styles.background}>
+            <img className={styles.logo} src={logo} alt="logo"/>
             <Form className={styles.form}>
                 <Input
                     className={styles.inputs}
@@ -24,12 +27,13 @@ const SignIn = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <Link to="/home">
-                    <Button className={styles.button}>Submit</Button>
-                </Link>
-                <Link to="/createaccount">
-                    <Button className={styles.button2}>Create Account</Button>
-                </Link>
+                <Button className={styles.button}>
+                    <Link to="/home" className={styles.signlinks}>Submit</Link>
+                </Button>
+
+                <Button className={styles.button2}>
+                    <Link to="/createaccount" className={styles.signlinks}>Create Account</Link>
+                </Button>
             </Form>
         </div>
     );
