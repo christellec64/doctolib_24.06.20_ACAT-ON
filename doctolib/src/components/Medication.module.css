@@ -10,7 +10,6 @@
 .nextMeditationContainer {
   margin-top: 2vw;
   margin-bottom: 2vw;
-  flex:1;
 }
 .nextMeditationAlert {
   background-color: #004163;
@@ -27,6 +26,7 @@
 }
 .medicationTableContainer {
   margin-bottom: 2vw;
+  height : 56vh
 }
 .medicationTable {
   background-color: #b5e2f5;

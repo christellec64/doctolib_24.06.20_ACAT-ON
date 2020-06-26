@@ -8,13 +8,11 @@ import {
   Row,
   Container,
   Button,
-  UncontrolledCollapse,
 } from "reactstrap";
 
 import styles from "./Mymedidoc.module.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useState } from "react";
 
 const documents = [
   {
@@ -105,7 +103,7 @@ class Mymedidoc extends React.Component {
     return (
       <>
         <Navbar title="My MediDoc" />
-        <Container>
+        <Container className={styles.scroll}>
           <Row>
             {file === "file"
               ? documents.map((doc) => {
