@@ -38,7 +38,7 @@ function ContentDashboard() {
 
       <Row className={styles.advice}>
         <Col xs='2'><img src={bulb} alt='light' className={styles.bulbImage}/></Col>
-        <Col xs='10' className={styles.adviceText}>Eat 5 fruits and 5 vegetables per day !</Col>
+        <Col xs='8' className={styles.adviceText}>Eat 5 fruit and veg per day !</Col>
       </Row>
 
       <Row className={styles.quote}>

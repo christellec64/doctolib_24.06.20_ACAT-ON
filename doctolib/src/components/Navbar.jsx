@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Navbar.module.css";
 
-import logo from "./img/logo.png";
+import logo from "./img/logowhite.png";
 
 import logout from "./img/logout.png";
 
