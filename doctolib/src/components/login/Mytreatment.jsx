@@ -3,6 +3,7 @@ import { Form, Button, Container, Row, Col } from "reactstrap";
 import styles from "./Mytreatment.module.css";
 import logo from "../img/logowhite.png";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 const MyTreatment = () => {
   const [medication, setMedication] = useState({});
