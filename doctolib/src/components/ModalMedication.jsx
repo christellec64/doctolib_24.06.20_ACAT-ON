@@ -9,6 +9,7 @@ import {
   InputGroup,
   ModalBody,
   Button,
+  ModalHeader,
 } from "reactstrap";
 import { api_url } from "../api";
 import styles from "./ModalMedication.module.css";
@@ -37,8 +38,10 @@ function ModalMedication({ modal, handleModal, item }) {
   return (
     <>
       <Modal isOpen={modal} toggle={handleModal} className={styles.modalsCss}>
+        <ModalHeader className={styles.modalmedicationHeader}>
+          Edit medication :
+        </ModalHeader>
         <ModalBody>
-          <h5 className={styles.editModalTitle}>Edit medication :</h5>
           <InputGroup className={styles.modalGroup}>
             <InputGroupAddon addonType="prepend">
               <InputGroupText className={styles.titleModal}>

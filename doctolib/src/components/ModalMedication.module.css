@@ -1,5 +1,9 @@
 .modalsCss {
-    margin-top: 30vh !important;
+  margin-top: 30vh !important;
+}
+.modalmedicationHeader {
+  background-color: #004163;
+  color: white;
 }
 .titleModal {
   background-color: #b5e2f5 !important;
@@ -13,12 +17,12 @@
 }
 .modalButton {
   background-color: #f3724a !important;
-  border: none !important
+  border: none !important;
 }
 .modalButtonDelete {
-    background-color: #f3724a !important;
-    border: none !important;
-    margin-bottom: 2vw;
-    margin-left: 58vw;
-    width:35%;
+  background-color: #f3724a !important;
+  border: none !important;
+  margin-bottom: 2vw;
+  margin-left: 58vw;
+  width: 35%;
 }

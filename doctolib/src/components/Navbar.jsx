@@ -42,7 +42,7 @@ function Navbar({ title }) {
             <ModalAvatar />
           </Col>
           <Col xs="1.5">
-            <Link to="/signin">
+            <Link to="/">
               <img src={logout} alt="log out" className={styles.item} />
             </Link>
           </Col>

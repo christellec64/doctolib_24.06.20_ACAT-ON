@@ -44,7 +44,7 @@ const CreateAccount = ({ setUserData, changePage, userData }) => {
             />
 
             <Button className={styles.button} onClick={() => changePage(2)}>
-              Sign up
+              Save
             </Button>
           </Form>
         </Row>
