@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
@@ -20,7 +20,6 @@ function App() {
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/createaccount" component={MainPage} />
             <Route exact path="/treatment" component={MyTreatment} />
-            <Route exact path="/pilllist" />                   
             <Route exact path="/stat" component={Stat} />
             <Route exact path="/mymedidocs" component={Mymedidoc} />
             <Route exact path="/dashboard" component={Dashboard} />

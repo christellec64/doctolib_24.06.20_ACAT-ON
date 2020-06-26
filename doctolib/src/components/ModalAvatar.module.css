@@ -1,0 +1,30 @@
+.item {
+  width: 2rem;
+  cursor : pointer 
+}
+
+.input {
+    border: 0px !important;
+    border-bottom: 1px solid rgb(185, 185, 185) !important;
+    margin-left : 5vw;
+    background-color: #B5E2F5 !important
+}
+.center {
+    align-self : self-end;
+}
+.row {
+    background-color: #B5E2F5;
+    height : 12vw;
+    padding : 1vw 0;
+    margin : 0 2vw !important;
+}
+
+.bleu {
+    background-color: #004163;
+    color : white;
+}
+
+.button {
+    background-color: #f3724a !important;
+    border-color : #f3724a !important
+}

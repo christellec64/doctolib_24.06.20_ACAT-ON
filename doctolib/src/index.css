@@ -17,3 +17,6 @@ code {
   width : 90vw !important;
   margin-left : 8vw;
 }
+.form-group {
+  margin-bottom : 1vw !important;
+}
