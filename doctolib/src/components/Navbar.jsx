@@ -3,13 +3,13 @@ import React from "react";
 import styles from "./Navbar.module.css";
 
 import logo from "./img/logo.png";
-import bell from "./img/bell.png";
 
 import logout from "./img/logout.png";
 
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import ModalAvatar from "./ModalAvatar";
+import ModalNotif from "./ModalNotif";
 
 function Navbar({ title }) {
   return (
@@ -34,7 +34,7 @@ function Navbar({ title }) {
             {title}
           </Col>
           <Col xs="1.5">
-            <img src={bell} alt="notification" className={styles.item} />
+            <ModalNotif />
           </Col>
           <Col xs="2">
             <ModalAvatar />
