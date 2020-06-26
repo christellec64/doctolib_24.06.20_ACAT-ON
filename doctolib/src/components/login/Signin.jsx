@@ -34,18 +34,12 @@ const SignIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <ModalForgetPassword />
-
-            <Button className={styles.button}>
-              <Link to="/dashboard" className={styles.signlinks}>
-                Submit
-              </Link>
-            </Button>
-
-            <Button className={styles.button2}>
-              <Link to="/createaccount" className={styles.signlinks}>
-                Create Account
-              </Link>
-            </Button>
+            <Link to="/dashboard" className={styles.signlinks}>
+              <Button className={styles.button}>Submit</Button>
+            </Link>
+            <Link to="/createaccount" className={styles.signlinks}>
+              <Button className={styles.button2}>Create Account</Button>
+            </Link>
           </Form>
         </Row>
       </Container>
