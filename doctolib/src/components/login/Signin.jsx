@@ -32,7 +32,7 @@ const SignIn = () => {
                         />
                         <input
                             className={styles.inputs}
-                            type="text"
+                            type="password"
                             value={password}
                             placeholder="password"
                             onChange={(e) => setPassword(e.target.value)}

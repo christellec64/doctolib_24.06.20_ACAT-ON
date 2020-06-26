@@ -10,6 +10,8 @@ import logout from "./img/logout.png";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
+
+
 function Navbar({ title }) {
   return (
     <>
