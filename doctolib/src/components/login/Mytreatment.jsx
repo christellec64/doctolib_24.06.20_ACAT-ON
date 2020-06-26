@@ -75,7 +75,7 @@ const MyTreatment = () => {
               />
             </label>
 
-            <Button className={styles.button} onClick={handleSubmit}>
+            <Button tag={Link} to="/dashboard" className={styles.button} onClick={handleSubmit}>
               Save
             </Button>
           </Form>
