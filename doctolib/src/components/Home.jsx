@@ -31,7 +31,7 @@ class Home extends React.Component {
         ) : animation === "sign" ? (
           <Signin />
         ) : (
-          ""
+          <Signin />
         )}
       </div>
     );
