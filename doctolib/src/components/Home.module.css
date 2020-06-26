@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .containerLogo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -9,12 +10,67 @@
 }
 
 .logo {
+  width:35%;
   height: 20%;
+  animation: heartBeat 1s;
+  animation-timing-function: steps(6);
+}
+@keyframes heartBeat {
+  0% {
+    width: 35%;
+    height: 20%;
+  }
+  15% {
+    width: 50%;
+    height: 30%;
+
+  }
+  25% {
+    width: 70%;
+    height: 40%;
+
+  }
+  40% {
+    width: 50%;
+    height: 30%;
+
+  }
+  55% {
+    width: 70%;
+    height: 40%;
+
+  }
+  100% {
+    width: 35%;
+    height: 20%;
+  }
 }
 
 .title {
   text-align: center;
   color: white;
   font-size: 2rem;
-  font-family: 'Lato'
+  font-family: "Lato";
+  animation: heartBeatText 1s;
+  animation-timing-function: steps(6);
+}
+@keyframes heartBeatText {
+  0% {
+    font-size: 2rem;
+  }
+  15% {
+    font-size: 3rem;
+  }
+  25% {
+    font-size: 4rem;
+  }
+  40% {
+    font-size: 3rem;
+  }
+  55% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
 }
