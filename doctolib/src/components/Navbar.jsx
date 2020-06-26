@@ -43,7 +43,9 @@ function Navbar({ title }) {
             </Link>
           </Col>
           <Col xs="1.5">
-            <img src={logout} alt="log out" className={styles.item} />
+            <Link to="/signin">
+              <img src={logout} alt="log out" className={styles.item} />
+            </Link>
           </Col>
         </Row>
       </Container>
