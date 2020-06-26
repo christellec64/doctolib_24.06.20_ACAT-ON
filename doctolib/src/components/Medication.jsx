@@ -87,7 +87,7 @@ class Medication extends React.Component {
             </Col>
             <Col>
               <p>Next medication in 73 minutes</p>
-              <p>Pillule D</p>
+              <p>Doliprane</p>
             </Col>
           </Row>
         </Container>
