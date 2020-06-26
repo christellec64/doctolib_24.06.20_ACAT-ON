@@ -30,7 +30,7 @@ function ContentDashboard() {
           <td><Badge pill color="dark">16:30</Badge></td>
         </tr>
         <tr className={styles.rowTable}>
-          <td>DOLIPRANE</td>
+          <td>INSULIN</td>
           <td><Badge pill color="dark">19:00</Badge></td>
         </tr>
       </tbody>
