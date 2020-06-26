@@ -1,0 +1,24 @@
+.modalsCss {
+    margin-top: 30vh !important;
+}
+.titleModal {
+  background-color: #b5e2f5 !important;
+  color: #004163 !important;
+}
+.modalGroup {
+  margin-bottom: 4vw;
+}
+.editModalTitle {
+  color: #004163 !important;
+}
+.modalButton {
+  background-color: #f3724a !important;
+  border: none !important
+}
+.modalButtonDelete {
+    background-color: #f3724a !important;
+    border: none !important;
+    margin-bottom: 2vw;
+    margin-left: 58vw;
+    width:35%;
+}
