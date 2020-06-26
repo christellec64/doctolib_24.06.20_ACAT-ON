@@ -81,7 +81,7 @@ const ModalAvatar = () => {
             <FormGroup>
               <Row className={styles.row}>
                 <Col xs="3" className={styles.center}>
-                  <Label for="height">Height</Label>
+                  <Label for="height">Height(m)</Label>
                 </Col>
                 <Col xs="8">
                   <Input
@@ -97,7 +97,7 @@ const ModalAvatar = () => {
             <FormGroup>
               <Row className={styles.row}>
                 <Col xs="3" className={styles.center}>
-                  <Label for="weight">Weight</Label>
+                  <Label for="weight">Weight(kg)</Label>
                 </Col>
                 <Col xs="8">
                   <Input
