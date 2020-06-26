@@ -38,9 +38,9 @@ class Medication extends React.Component {
     this.getPills();
   }
   componentDidUpdate(prevProps, prevState) {
-    const {modal} = this.state;
-    if (prevState.modal !== modal) {
-      this.getPills(modal)
+    const {pill} = this.state;
+    if (prevState.modal !== pill) {
+      this.getPills(pill)
     }
   }
   toggle(){
@@ -134,7 +134,7 @@ class Medication extends React.Component {
                           >
                             Edit
                           </Button>
-                          <ModalMedication  getPills={this.getPills} item={item} modal={this.state.modal} handleModal={this.getModal} />
+                          <ModalMedication getPills={this.getPills} item={item} modal={this.state.modal} handleModal={this.getModal} />
                         </Collapse>
                         <Collapse
                           isOpen={this.state.collapse}
