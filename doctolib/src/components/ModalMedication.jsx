@@ -11,6 +11,7 @@ import {
   Button,
 } from "reactstrap";
 import { api_url } from "../api";
+import styles from "./ModalMedication.module.css";
 
 function ModalMedication({ modal, handleModal, item }) {
   //   const [modal, setModal] = useState(false);
@@ -35,11 +36,14 @@ function ModalMedication({ modal, handleModal, item }) {
 
   return (
     <>
-      <Modal isOpen={modal} toggle={handleModal}>
+      <Modal isOpen={modal} toggle={handleModal} className={styles.modalsCss}>
         <ModalBody>
-          <InputGroup>
+          <h5 className={styles.editModalTitle}>Edit medication :</h5>
+          <InputGroup className={styles.modalGroup}>
             <InputGroupAddon addonType="prepend">
-              <InputGroupText>Disease name</InputGroupText>
+              <InputGroupText className={styles.titleModal}>
+                Disease name
+              </InputGroupText>
             </InputGroupAddon>
             <Input
               onChange={(e) =>
@@ -53,7 +57,9 @@ function ModalMedication({ modal, handleModal, item }) {
           </InputGroup>
           <InputGroup>
             <InputGroupAddon addonType="prepend">
-              <InputGroupText>Frequency</InputGroupText>
+              <InputGroupText className={styles.titleModal}>
+                Frequency
+              </InputGroupText>
             </InputGroupAddon>
             <Input
               onChange={(e) =>
@@ -67,12 +73,19 @@ function ModalMedication({ modal, handleModal, item }) {
           </InputGroup>
         </ModalBody>
         <ModalFooter>
-
-          <Button onClick={() => postPills()}>Save</Button>
-          <Button onClick={() => deletePills()}>Delete</Button>
-          <Button onClick={handleModal}>Cancel</Button>
-
+          <Button onClick={() => postPills()} className={styles.modalButton}>
+            Save
+          </Button>
+          <Button onClick={handleModal} className={styles.modalButton}>
+            Cancel
+          </Button>
         </ModalFooter>
+        <Button
+          onClick={() => deletePills()}
+          className={styles.modalButtonDelete}
+        >
+          Delete
+        </Button>
       </Modal>
     </>
   );
