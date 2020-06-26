@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Form, Button, Container, Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import styles from "./Signin.module.css";
+import ModalForgetPassword from "./ModalForgetPassword";
 
 const SignIn = () => {
   const logo = require("../img/logowhite.png");
 
-  const [setEmail] = useState([""]);
+  const [email, setEmail] = useState("elvis.presley@wcs.fr");
   const [password, setPassword] = useState("");
   return (
     <div className={styles.background}>
@@ -22,7 +23,7 @@ const SignIn = () => {
             <input
               className={styles.inputs}
               type="text"
-              value="elvis.presley@wcs.fr"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
@@ -32,12 +33,19 @@ const SignIn = () => {
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link to="/dashboard" className={styles.signlinks}>
-              <Button className={styles.button}>Submit</Button>
-            </Link>
-            <Link to="/createaccount" className={styles.signlinks}>
-              <Button className={styles.button2}>Create Account</Button>
-            </Link>
+            <ModalForgetPassword />
+
+            <Button className={styles.button}>
+              <Link to="/dashboard" className={styles.signlinks}>
+                Submit
+              </Link>
+            </Button>
+
+            <Button className={styles.button2}>
+              <Link to="/createaccount" className={styles.signlinks}>
+                Create Account
+              </Link>
+            </Button>
           </Form>
         </Row>
       </Container>
