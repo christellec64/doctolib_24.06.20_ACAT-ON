@@ -26,8 +26,7 @@ const SignIn = () => {
                         <input
                             className={styles.inputs}
                             type="text"
-                            value={email}
-                            placeholder="email"
+                            value="elvis.presley@wcs.fr"
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <input

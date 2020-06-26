@@ -1,0 +1,32 @@
+.item {
+  width: 2rem;
+  cursor: pointer;
+}
+.bleu {
+  background-color: #004163;
+  color: white;
+}
+.p {
+  background-color: #b5e2f5;
+  height :10vh;
+  margin : 0 1vw 2vw 1vw !important;
+  align-self : center;
+  padding-top : 1vw;
+  text-align : center
+}
+.p2 {
+    padding-top : 1vw;
+
+}
+.badge {
+    width : 4rem;
+}
+.p3 {
+    padding-top : 5vw;
+    background-color: #b5e2f5;
+    height :10vh;
+    margin : 0 1vw 2vw 1vw !important;
+    align-self : center;
+    text-align : center
+  
+}
