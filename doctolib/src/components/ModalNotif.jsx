@@ -5,7 +5,6 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter,
 } from "reactstrap";
 import styles from "./ModalNotif.module.css";
 import bell from "../img/notif.png";
