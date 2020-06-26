@@ -16,7 +16,13 @@
 }
 .p2 {
     padding-top : 1vw;
+    display: flex;
+    align-items: center;
 
+}
+.badgeCol{
+    display: flex;
+    align-items: center;
 }
 .badge {
     width : 4rem;

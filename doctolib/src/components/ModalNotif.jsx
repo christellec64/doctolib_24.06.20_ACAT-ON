@@ -30,12 +30,12 @@ const ModalNotif = () => {
         </ModalHeader>
         <ModalBody>
           <Row className={styles.p}>
-            <Col xs="8" className={styles.p2}>Congratulations! You reach 90% !!</Col>
-            <Col xs="3">
+            <Col xs="8" className={styles.p2}>Congratulations! You scored 90% on medication this week !!</Col>
+            <Col xs="3" className={styles.badgeCol}>
               <img className={styles.badge} src={badge} alt="badge" />
             </Col>
           </Row>
-          <p className={styles.p3}>Your informations have been updated.</p>
+          <p className={styles.p3}>Your information has been updated.</p>
         </ModalBody>
       </Modal>
     </div>
