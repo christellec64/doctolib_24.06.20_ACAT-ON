@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import styles from "./Mytreatment.module.css";
-import logo from "../img/logowhite.png"
+import logo from "../img/logowhite.png";
 import Axios from "axios";
 
 const MyTreatment = () => {
@@ -11,12 +11,10 @@ const MyTreatment = () => {
   const numbers = [1, 2, 3, 4];
 
   const handleSubmit = () => {
-    console.log(medication)
-    Axios.post(
-      "http://localhost:8000/medicaments",
-       medication ,
-      { header: { "Content-Type": "application.json" } }
-    ).catch((err) => console.log(err.message));
+    console.log(medication);
+    Axios.post("http://localhost:8000/medicaments", medication, {
+      header: { "Content-Type": "application.json" },
+    }).catch((err) => console.log(err.message));
   };
 
   return (
@@ -31,7 +29,7 @@ const MyTreatment = () => {
             <h2>My Treatment</h2>
           </Col>
         </Row>
-        <Row className={styles.formContainer}>
+        <div className={styles.formContainer}>
           <Form className={styles.form}>
             <input
               className={styles.inputs}
@@ -49,27 +47,22 @@ const MyTreatment = () => {
                 setMedication({ ...medication, dosage: e.target.value })
               }
             />
-            {/* <input
-              className={styles.inputs}
-              type="text"
-              value={medication.frequency}
-              placeholder="Frequency per day"
+            
+                <p className={styles.inputs2}>Frequency</p>
               
-            /> */}
-            <p className={styles.inputs}>Frequency</p>
-            <select
-              className={styles.inputfrequency}
-              type="text"
-              placeholder="Frequency per day"
-              onChange={(e) =>
-                setMedication({ ...medication, frequency: e.target.value })
-              }
-            >
-              {numbers.map((number) => (
-                <option value={number}>{number}</option>
-              ))}
-            </select>
-
+                <select
+                  className={styles.inputfrequency}
+                  type="text"
+                  placeholder="Frequency per day"
+                  onChange={(e) =>
+                    setMedication({ ...medication, frequency: e.target.value })
+                  }
+                >
+                  {numbers.map((number) => (
+                    <option value={number}>{number}</option>
+                  ))}
+                </select>
+            
             <label className={styles.timelabel}>
               What time do you take your first medication?
               <input
@@ -82,11 +75,11 @@ const MyTreatment = () => {
               />
             </label>
 
-            <Button className={styles.button} onClick={handleSubmit}>
+            <Button tag={Link} to="/dashboard" className={styles.button} onClick={handleSubmit}>
               Save
             </Button>
           </Form>
-        </Row>
+        </div>
       </Container>
     </div>
   );
