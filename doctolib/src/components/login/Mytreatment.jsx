@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
 import styles from "./Mytreatment.module.css";
 import logo from "../img/logowhite.png";
 import Axios from "axios";
